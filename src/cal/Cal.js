@@ -15,8 +15,12 @@ const Cal = () => {
 
     }
     const add =(e)=>{
-        setRes(input1+input2)
-        console.log(typeof res)
+        const x=Number(input1)
+        const y=Number(input2)
+       const addition=x+y
+        setRes(addition)
+
+        console.log(res)
 
     }
     return (
