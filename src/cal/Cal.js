@@ -55,6 +55,9 @@ const Cal = () => {
         setRes(rem)
        
     }
+    const numbers = [1, 2, 3, 4, 5,6,7,8,9,0];
+    const array = numbers.map((newarray) => newarray );
+    console.log(array);
 
     return (
         <div>
@@ -97,6 +100,7 @@ const Cal = () => {
                 <input  type="number" onChange={text2} />
                 <button onClick={ remainder}>=</button>  <p>{res}</p>
                 
+                <div>{array}</div>
                
             </div>
         </div>
