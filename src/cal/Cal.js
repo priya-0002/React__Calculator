@@ -69,24 +69,13 @@ const Cal = () => {
 
     return (
         <div>
-            <div>
-                <h1>{test.cars[0]}</h1>
-             
-            </div>  
+            
             <div className="parent">
                 <input type="number" onChange={text1} />
                 <button>+</button>
                 <input  type="number" onChange={text2} />
                  <button onClick={add}>=</button> <p>{res}</p>
-                <h1>{numbers[0].model}</h1>
-                 <ul>
-      {numbers.map((number) =>
-      <div>
-        <button key={number}>{number} </button>
-                   
-     </div>
-      )}
-    </ul>
+                
               
 
         
@@ -126,6 +115,18 @@ const Cal = () => {
                
                
             </div>
+            <div>
+                <h1>{test.cars[0]}</h1>
+                <ul>
+      {numbers.map((number) =>
+      <div>
+        <button key={number}>{number} </button>
+                   
+     </div>
+      )}
+    </ul>
+             
+            </div>  
         </div>
     )
 }
