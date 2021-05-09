@@ -55,18 +55,41 @@ const Cal = () => {
         setRes(rem)
        
     }
-    const numbers = [1, 2, 3, 4, 5,6,7,8,9,0];
-    const array = numbers.map((newarray) => newarray );
-    console.log(array);
+    const test= {
+       
+        "cars":[ "Ford", "BMW", "Fiat" ]
+      };
+      console.log(test)
+
+    const numbers =[0,1,2,3,4,5,6,7,8,9]
+        
+        console.log(numbers)
+
+    
 
     return (
         <div>
+            <div>
+                <h1>{test.cars[0]}</h1>
+             
+            </div>  
             <div className="parent">
                 <input type="number" onChange={text1} />
                 <button>+</button>
                 <input  type="number" onChange={text2} />
                  <button onClick={add}>=</button> <p>{res}</p>
-               
+                <h1>{numbers[0].model}</h1>
+                 <ul>
+      {numbers.map((number) =>
+      <div>
+        <button key={number}>{number} </button>
+                   
+     </div>
+      )}
+    </ul>
+              
+
+        
                
                 <br />
 
@@ -100,7 +123,7 @@ const Cal = () => {
                 <input  type="number" onChange={text2} />
                 <button onClick={ remainder}>=</button>  <p>{res}</p>
                 
-                <div>{array}</div>
+               
                
             </div>
         </div>
