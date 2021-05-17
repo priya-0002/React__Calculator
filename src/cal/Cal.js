@@ -1,8 +1,13 @@
 import React from 'react'
 import {useState} from 'react'
+import { Form } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
 const Cal = () => {
     const [input1, setInput1] = useState()
     const [input2, setInput2] = useState()
+    const [input3, setInput3] = useState()
     const [res, setRes] = useState()
    
     const text1 =(e)=>{
@@ -15,10 +20,16 @@ const Cal = () => {
        
 
     }
+    const text3 =(e)=>{
+      setInput3(e.target.value)
+     
+
+  }
     const add =(e)=>{
         const x=Number(input1)
         const y=Number(input2)
-       const addition=x+y
+        const z=Number(input3)
+       const addition=(input1 * (input2 * 0.01))/input3;
        setRes(addition)
        
        
@@ -74,7 +85,10 @@ const Cal = () => {
                 <input type="number" onChange={text1} />
                 <button>+</button>
                 <input  type="number" onChange={text2} />
+                <input  type="number" onChange={text3} />
                  <button onClick={add}>=</button> <p>{res}</p>
+                 <button onClick={add}>=</button> <p>{res}</p>
+
                 
               
 
@@ -125,8 +139,34 @@ const Cal = () => {
      </div>
       )}
     </ul>
+    
              
             </div>  
+            <form >
+        <label style={{
+                    width:'300px'}}>Blog title:</label>
+        <input 
+          type="text" 
+          required 
+          value={tittle}
+          onChange={(e) => setTittle(e.target.value)}
+        />
+        <label>Blog body:</label>
+        <textarea
+          required
+          value={body}
+          onChange={(e) => setBody(e.target.value)}
+        ></textarea>
+        <label>Blog author:</label>
+        <select
+          value={author}
+          onChange={(e) => setAuthor(e.target.value)}
+        >
+          <option value="Robin">Robin</option>
+          <option value="Shenoy">Shenoy</option>
+        </select>
+       {!isPending?<button>Add Blog</button>:<button>Adding Blog</button>} 
+      </form>
         </div>
     )
 }
