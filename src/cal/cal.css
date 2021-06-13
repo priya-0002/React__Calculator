@@ -1,8 +1,63 @@
-.parent {
-    position: absolute;
-    top: 30px;
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&family=Pattaya&display=swap');
+
+
+
+.container { 
+    background-color: #e4ebf5;
+    width: 265px; 
+    height: 53px;
+    padding: 11px;
+    margin-left: 590px;
+    margin-top: 200px;
+    border-radius: 8px;
+    box-shadow: 9px 9px 16px rgb(163,177,198,0.6), -9px -9px 16px    rgba(255,255,255, 0.7);
+    
+}
+
+.container:hover {
+         
+      box-shadow: inset 9px 9px 16px rgb(163,177,198,0.6), inset -9px -9px 16px    rgba(255,255,255, 0.7);
+}
+
+input {
+width: 240px;
+height: 33px;
+margin-left: 8px;
+margin-top: 8px;
+padding: 3px;
+border-radius: 5px;
+border: 0px;
+transition: 0.4s ease-in-out;
 
 }
-.form card{
-   height: 12vh;
+
+input:hover {
+     transform: scale(1.05,1.05);
+}
+
+input:focus {
+      color: #151515;
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: 18px;
+      outline: none;
+      border-left: 5px solid #00A4FF;
+}
+
+.material-icons.md-18 {
+          position: relative;
+          left: 220px;
+          top: -32px;
+          font-size: 28px;
+          color: rgba(121, 121, 121, 0.8);
+          transition: 0.3s ease;
+}
+
+.material-icons.md-18:hover {
+                     cursor: pointer;
+                     color: rgba(121, 121, 121, 1);
+}
+
+.material-icons.md-18:active {
+                  color: #191919; 
+                  cursor: pointer;
 }
